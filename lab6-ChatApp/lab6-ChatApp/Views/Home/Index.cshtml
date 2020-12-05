@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+}
+
+<input type="hidden" value="@ViewData["Username"]" id="user-name" />
+
+<h1>Chat Application</h1>
+
+<div class="row">
+    <div class="col-md-10">
+        <input placeholder="Enter the message" id="textboxMsg" class="form-control" />
+    </div>
+    <div class="col-md-2 text-right">
+        <button id="btnSend" class="btn btn-success">Send</button>
+    </div>
+
+    <div class="col-12">
+        <ul id="listChat">
+        </ul>
+    </div>
+</div>
+
+@section Scripts{ 
+<script src="~/app.js"></script>
+}
+

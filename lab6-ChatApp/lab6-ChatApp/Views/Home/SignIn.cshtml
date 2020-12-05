@@ -1,0 +1,26 @@
+﻿@model lab6_ChatApp.Models.SignInViewModel
+@{
+    ViewData["Title"] = "SignIn";
+    Layout = "_Layout";
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="py-3 text-danger font-weight-bold">
+        @Html.ValidationSummary()
+    </div>
+}
+
+<form asp-controller="Home" asp-action="SignIn">
+    <div class="row">
+        <div class="col-12">
+            <input class="form-control" asp-for="Username" placeholder="Username" />
+        </div>
+        <div class="col-12 text-right py-3">
+            <button class="btn btn-success">Sign in to the app</button>
+        </div>
+    </div>
+</form>
+
+
+
